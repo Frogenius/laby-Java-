@@ -1,3 +1,3 @@
 # laby-Java-
 Programowanie Obiektowe Java
-*** Zadania Java UG ***
+_Zadania Java UG_
