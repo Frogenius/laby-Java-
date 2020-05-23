@@ -1,0 +1,52 @@
+package zad2;
+​
+public class Zad2 {
+​
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Kalkulator kalkulatorPodstawowy = new Kalkulator(10,20);
+		System.out.println(kalkulatorPodstawowy.dodaj()); // w Podstawowa
+		System.out.println(kalkulatorPodstawowy.odejmij()); // w Podstawowa
+         System.out.println();
+
+   KalkulatorStatystyczny kalkulatorStatystyczny = new KalkulatorStatystyczny(10,20);
+		System.out.println(kalkulatorStatystyczny.dodaj()); // w Podstawowa
+		System.out.println(kalkulatorStatystyczny.odejmij()); // w Pochodna
+		System.out.println(kalkulatorStatystyczny.sinus()); // w Pochodna
+
+
+    }
+   static class Kalkulator{
+        protected int a, b;
+       public Kalkulator(int Zad, int zad1){
+           a = Zad;
+           b = zad1;
+        }
+        public int dodaj() {
+            return a+b;
+        }
+​
+        public int odejmij() {
+	return a-b;
+        }
+
+    }
+    static class  KalkulatorStatystyczny extends Kalkulator {
+​
+        public KalkulatorStatystyczny(int Zad, int zad1) {
+            super(Zad, zad1);
+        }
+
+        public double sinus() {
+
+            return  Math.sin(b);
+
+        }
+​
+
+
+    }
+
+}
