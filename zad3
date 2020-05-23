@@ -1,0 +1,30 @@
+package zad3;
+​
+​
+public class Zad3 {
+​
+
+    public static void main(String[] args) {
+        Podstawowa b1 = new Podstawowa();
+        b1.wypisz();
+        System.out.println();
+
+        Pochodna d1 = new Pochodna();
+        d1.wypisz();
+    }
+     static class Podstawowa{
+
+        public void wypisz( ){
+            System.out.println( "Hello" );
+        }
+     }
+     static class Pochodna extends Podstawowa {
+
+     @Override
+     public void wypisz( ){
+         super.wypisz();
+            System.out.println( "World" );
+
+        }
+     }
+}
