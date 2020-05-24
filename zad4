@@ -1,0 +1,57 @@
+
+package zadanie4;
+​
+public class Zadanie4 {
+​
+
+    public static void main(String[] args) {
+        Punkt2D p1 = new Punkt2D();
+        p1.wypisz();
+
+        Punkt2D p2 = new Punkt2D(10,20);
+        p2.wypisz();
+
+        Punkt3D p3 = new Punkt3D(0,0,0);
+        p3.wypisz();
+
+        Punkt3D p4 = new Punkt3D(18,20,30);
+        p4.wypisz();
+    }
+     static class Punkt2D{
+        protected int x,y;
+        Punkt2D(){
+            x = 0;
+            y = 0;
+
+         }
+        Punkt2D(int a, int b){
+            this.x = a;
+            this.y = b;
+         }
+
+        public void wypisz( ){
+            System.out.println( "{"+x+", "+y+"}" );
+        }
+     }
+     static class Punkt3D extends Punkt2D {
+       protected int z;
+       Punkt3D(){
+            x = 0;
+            y = 0;
+            z = 0;
+         }
+       Punkt3D(int a, int b, int c){
+           super(a,b);
+            this.x = a;
+            this.y = b;
+            this.z = c;
+         }
+     @Override
+     public void wypisz( ){
+
+            System.out.println( "{"+x+", "+y+", "+ z +"}" );
+
+        }
+    }
+
+}
